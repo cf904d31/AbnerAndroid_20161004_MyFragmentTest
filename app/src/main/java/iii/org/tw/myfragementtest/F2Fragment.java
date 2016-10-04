@@ -27,10 +27,10 @@ public class F2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_f1, container, false);
-        textView = (TextView) view.findViewById(R.id.text_f1);
+        View view = inflater.inflate(R.layout.fragment_f2, container, false);
+        textView = (TextView) view.findViewById(R.id.text_f2);
         button = (Button)view.findViewById(R.id.button_f2);
-        textView.setText("Hello Abner! I am f1");
+        textView.setText("Hello Abner! I am f2");
         return view;
     }
 
