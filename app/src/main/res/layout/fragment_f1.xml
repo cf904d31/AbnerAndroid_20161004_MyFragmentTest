@@ -1,14 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="iii.org.tw.myfragementtest.F1Fragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/button_f1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="b1"
+        android:onClick="b1"
+        android:layout_weight="1"
+        />
     <TextView
+        android:id="@+id/text_f1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="24sp"
-        android:text="I am f1" />
+        android:text="I am f1"
+        android:layout_weight="1"/>
 
-</FrameLayout>
+</LinearLayout>
