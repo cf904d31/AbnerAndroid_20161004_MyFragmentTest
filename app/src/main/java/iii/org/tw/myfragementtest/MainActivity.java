@@ -31,10 +31,32 @@ public class MainActivity extends AppCompatActivity {
 
     public void test1(View v) {
         isF1 = !isF1;
-        fmgr = getFragmentManager();
         tran = fmgr.beginTransaction();
         tran.replace(R.id.container,isF1?f1:f2);
+        //-----加上此方法可以讓返回鍵不會直接結束APP
+        tran.addToBackStack(null);
+        //-------------------------------------------------------------
         tran.commit();
+    }
+
+    F1Fragment getF1() {
+        tran = fmgr.beginTransaction();
+        tran.replace(R.id.container,f1);
+        //-----加上此方法可以讓返回鍵不會直接結束APP
+        tran.addToBackStack(null);
+        //-------------------------------------------------------------
+        tran.commit();
+        return f1;
+    }
+
+    F2Fragment getF2() {
+        tran = fmgr.beginTransaction();
+        tran.replace(R.id.container,f2);
+        //-----加上此方法可以讓返回鍵不會直接結束APP
+        tran.addToBackStack(null);
+        //-------------------------------------------------------------
+        tran.commit();
+        return f2;
     }
 
     public void b1(View v) {

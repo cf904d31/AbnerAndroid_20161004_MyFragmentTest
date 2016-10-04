@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class F1Fragment extends Fragment {
     private TextView textView;
     private Button button;
+    private MainActivity main;
 
     public F1Fragment() {
         // Required empty public constructor
@@ -27,10 +28,18 @@ public class F1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        main = (MainActivity) getActivity();
         View view = inflater.inflate(R.layout.fragment_f1, container, false);
         textView = (TextView) view.findViewById(R.id.text_f1);
         button = (Button)view.findViewById(R.id.button_f1);
         textView.setText("Hello Abner! I am f1");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.getF2();
+            }
+        });
 
         return view;
     }
